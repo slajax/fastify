@@ -5,3 +5,9 @@ services:
     run: npm start
     port: [ '8080:8080' ]
     domain: ""
+    events:
+     - "github:slajax/fastify:push:ref==master"
+    trigger:
+     - build
+     - publish
+     - start
